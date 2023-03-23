@@ -1,0 +1,106 @@
+1) What is Spring Framework and what are its advantages?
+	* It is a framework that simplifies the process of developing and deploying the web applications in fast and easy way.
+	* Advantages: Light weight, flexible, loose coupling.
+
+2) What is Inversion of Control (IoC) in Spring Framework?
+	* It is a design pattern used in software development to achieve loose coupling between different components of an application.
+	* Features: Bean instantiation,configuration,dependency injection.
+
+3) What is Dependency Injection (DI) in Spring Framework?
+	* Dependency Injection allows for the separation of object creation and object usage.
+	
+4) What is a Bean in Spring Framework?
+	* Bean refers to an object that is ready to use and it is managed by the spring container.
+	
+5) What are the different scopes of Beans in Spring Framework?
+	* Singleton (default): Singleton bean is created once per spring container and same instance is returned every time bean is requested.
+	* Prototype : Prototype Bean is created every time when it is requested,so new instance is returned on each request.
+	* Request: Request bean is created once per HTTP request. It has its own instance of bean for each HTTP request.
+	* Session: Session bean is created once per HTTP session. The user session will have its own instance of bean.
+	* Global Session: Global-session bean is created once per global HTTP session in portlet context. It is applicable only in portlet context.
+
+6) What is a BeanFactory in Spring Framework?
+	* BeanFactory is an interface for managing beans, which are objects that are instantiated, assembled and managed by the spring IOC container.
+
+7) What is an ApplicationContext in Spring Framework?
+	* ApplicationContext is the interface within a spring application that is used for providing configuration information to the application.
+
+8) What is the difference between BeanFactory and ApplicationContext in Spring Framework?
+	* BeanFactory : i) It uses Lazy initialization.
+		     ii) It explicity provides a resource object using the syntax.
+		     iii) It doesn't supports annotation based dependency.
+	
+	* ApplicationContext: i) It uses aggressive initialization.
+			   ii) It creates and manage resources objects on its own.
+			  iii) It supports annotation based dependency.
+
+9) What is Spring MVC and how does it work?
+	* Spring MVC is a java framework that is used to develop web applications.
+	* It is built on a Model-View-Controller(MVC) pattern and possessess all the basic features of a spring framework such as Dependency injection, Inversion of Control.
+
+10) What is the DispatcherServlet in Spring MVC?
+	* With the help of Handler Mapping, the DispatcherServlet will understand the controller name associated with received request.
+	* Once the DispatcherServlet knows which controller will be able to handle the request,it will transfer the request to it.
+
+11) What is a Controller in Spring MVC?
+	* Controller will process the request based on appropriate methods and will return it to Model Data and view name.
+
+12) What is a View in Spring MVC?
+	* View is used to return a user interface output to the user in response to the user request.
+
+13) What is a Model in Spring MVC?
+	* Model represents a data structure that contains the data to be displayed in the view.
+	* It holds the data and provides a way to pass it between the controller and the view.
+
+14) What is a ViewResolver in Spring MVC?
+	* It provides a mapping between view names and actual views.
+	* Once the model and view receive the data, DispatcherServlet will transfer it to the view Resolver to get actual view page.
+
+15) What is the difference between @Component, @Service, and @Repository annotations in Spring Framework?
+	* @Component: @Component is used across the application to mark the beans as spring's managed components.
+	* @Service: @Service is for service layer. The beans are marked with @service to indicate that they're holding the business logic.
+	* @Repository: @Repository is for persistence layer and indicates the class for storage,retrieval,update,delete and search operation om objects.
+
+16) What is the purpose of @Autowired annotation in Spring Framework?
+	* @Autowired is used to inject dependencies automatically into spring-managed bean.
+	* It reduces the boilerplate code required to manually wire the dependencies between beans.
+
+17) What is the purpose of @RequestMapping annotation in Spring MVC?
+	* @RequestMapping is used to map HTTP requests to handler methods in a controller.
+	* It defines the URL pattern that should be matched to invoke a specific controller method.
+
+18) What is the purpose of @PathVariable annotation in Spring MVC?
+	* @PathVariable is to enable the mapping of URL variables to method parameters in spring mvc controlllers.
+
+19) What is the purpose of @RequestParam annotation in Spring MVC?
+	* @RequestParam is used to read the data and bind it automatically to the parameter present in the provided method.
+
+20) What is the purpose of @ResponseBody annotation in Spring MVC?
+	* @ResponseBody is used to indicate the controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
+
+21) What is the purpose of @Valid annotation in Spring MVC?
+	* @Valid is used to validate input data on server-side before processing.
+	* It is class-level annotation that can indicate the spring to validate parameters that are passed into a method of annotated class.
+
+22) What is the purpose of @Configuration annotation in Spring Framework?
+	* @Configuration is used to indicate that a class is a configuration class, which contains spring bean definitions and other configuration related methods.
+
+23) What is the purpose of @Bean annotation in Spring Framework?
+	* @Bean is applied on method-level to specify that it returns a bean to be managed by spring context.
+
+24) What is the difference between @Configuration and @Component annotations in Spring Framework?
+	* @Configuration: i) It is used to define a configuration class.
+			ii) This class is used to define beans and their dependencies and akso include other configuration classes.
+
+	* @Component: i) It is used to indicate that a class is spring-managed component.
+		   ii) The spring will create an instances of component and manage its lifecycle(create,configure,destroy).
+
+25)  How many ways can Dependency Injection be done in Spring framework ?
+	* Constructor Injection: The spring container automatically detects the dependencies and inject them when object is created.
+	* Setter Injection: The spring container calls the setter methods after the object is created and sets the required dependencies.
+	* Field Injection: The dependencies are directly injected into fields using @Autowired.
+	* Interface Injection: The spring container provides dependencies by passing them as arguments to interface methods.
+	* Method Injection: The spring container automatically detects the methods and injects the required dependencies when the object is created.
+
+	
+	
